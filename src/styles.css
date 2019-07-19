@@ -3,12 +3,24 @@ body {
   color: #edebed;
   font-family: sans-serif;
   font-size: 1.2rem;
+  max-width: 1000px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .row {
   display: flex;
-  align-items: center;
-  justify-content: stretch;
+  align-items: stretch;
+  justify-content: center;
+  border-bottom: 1px solid silver;
+  margin-bottom: 0.5rem;
+}
+
+.row span {
+  font-size: 1rem;
+  margin-right: 0.2rem;
 }
 
 .row label {
@@ -17,6 +29,11 @@ body {
 
 h1 {
   font-size: 1.5rem;
+  border-bottom: 4px solid silver;
+}
+
+b {
+  font-size: 1.6rem;
 }
 
 .actions {
@@ -44,7 +61,7 @@ h1 {
 }
 
 input[type="number"] {
-  max-width: 80px;
+  max-width: 120px;
   font-size: 1.2rem;
   padding: 0.3rem;
 }

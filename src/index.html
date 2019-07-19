@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculatrice de bar</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <p><b>Note: </b>Les prix affichés ici sont consigne comprise.</p>
   <h1>Consommations:</h1>
   <div id="consoContainer">
 
@@ -25,7 +26,7 @@
   </div>
   <div class="total-row">
     <span>Montant payé:</span>
-    <input type="number" value="0" size="4" id="paidInput" />
+    <input type="number" value="0" id="paidInput" />
   </div>
   <div class="total-row">
     <span>A rendre:</span>
@@ -33,18 +34,19 @@
   </div>
 
   <div class="actions">
-    <button type="button" id="topBtn">Retour au dessus</button>
+    <!--<button type="button" id="topBtn">Retour au dessus</button>-->
     <button type="button" id="resetBtn">Réinitaliser</button>
   </div>
 
   <!-- Templates -->
   <div id="template" style="display: none;" class="row">
     <label></label>
-    <input type="number" size="4" value="0" />
+    <span></span>
+    <input type="number" value="0" />
     <button type="button" data-btn-plus>+</button>
     <button type="button" data-btn-minus>-</button>
   </div>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
