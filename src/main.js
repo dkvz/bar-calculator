@@ -61,6 +61,26 @@ const bar = {
       name: 'Chips',
       price: 1.0,
       deposit: false
+    },
+    {
+      name: 'Portion frites',
+      price: 2.5,
+      deposit: false
+    },
+    {
+      name: 'Sauce',
+      price: 0.5,
+      deposit: false
+    },
+    {
+      name: 'Fricandelle',
+      price: 1.5,
+      deposit: false
+    },
+    {
+      name: 'Cervelas',
+      price: 1.5,
+      deposit: false
     }
   ],
   deposits: [
@@ -69,8 +89,12 @@ const bar = {
       price: 1.0
     },
     {
-      name: 'Plateau',
+      name: 'Plateau metal',
       price: 10.0
+    },
+    {
+      name: 'Plateau',
+      price: 5.0
     }
   ],
   _resetQty: function(array) {
@@ -161,3 +185,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   window.scrollTo(0, 0);
   bar.reset();
 });
+
+document.getElementById('goTotalsBtn').addEventListener('click', () => 
+  window.scrollTo(0, document.body.scrollHeight)
+);

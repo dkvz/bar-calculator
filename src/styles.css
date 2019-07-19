@@ -2,8 +2,9 @@ body {
   background-color: #333;
   color: #edebed;
   font-family: sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 1000px;
+  margin-bottom: 3rem;
 }
 
 * {
@@ -64,4 +65,12 @@ input[type="number"] {
   max-width: 90px;
   font-size: 1.2rem;
   padding: 0.3rem;
+}
+
+.note {
+  font-size: 0.9rem;
+}
+
+.note b {
+  font-size: 1rem;
 }
