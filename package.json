@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npx parcel src/index.html",
-    "build": "npx parcel build src/index.html"
+    "build": "npx parcel build src/index.html --public-url '.'"
   },
   "author": "dkvz",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }
