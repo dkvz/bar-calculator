@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculatrice de bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Consommations:</h1>
+  <div id="consoContainer">
+
+  </div>
+
+  <h1>Consignes:</h1>
+  <div id="depositContainer">
+
+  </div>
+  
+  <h1>Totaux:</h1>
+  <div class="total-row">
+    <span>Total à payer:</span>
+    <b id="total">0€</b>
+  </div>
+  <div class="total-row">
+    <span>Montant payé:</span>
+    <input type="number" value="0" size="4" id="paidInput" />
+  </div>
+  <div class="total-row">
+    <span>A rendre:</span>
+    <b id="toReturn">0€</b>
+  </div>
+
+  <div class="actions">
+    <button type="button" id="topBtn">Retour au dessus</button>
+    <button type="button" id="resetBtn">Réinitaliser</button>
+  </div>
+
+  <!-- Templates -->
+  <div id="template" style="display: none;" class="row">
+    <label></label>
+    <input type="number" size="4" value="0" />
+    <button type="button" data-btn-plus>+</button>
+    <button type="button" data-btn-minus>-</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
