@@ -112,14 +112,12 @@ const bar = {
   },
   updatePrices: function() {
     // Compute and display prices:
-    const totalPrice = this.consos.reduce((acc, c) => {
-      acc += c.qty * c.price;
-      return acc;
-    }, 0);
-    const depositPrice = this.deposits.reduce((acc, c) => {
-      acc += c.qty * c.price;
-      return acc;
-    }, 0);
+    const totalPrice = this.consos.reduce(
+      (acc, c) => acc += c.qty * c.price, 
+    0);
+    const depositPrice = this.deposits.reduce(
+      (acc, c) => acc += c.qty * c.price,
+    0);
     const finalPrice = totalPrice - depositPrice;
     this.totalEl.textContent = formatPrice(finalPrice);
     const paid = Number(this.paidInputEl.value);
@@ -139,13 +137,13 @@ const bar = {
     // Put 0 on totals fields as well:
     this.toReturnEl.textContent = formatPrice(0);
     this.totalEl.textContent = formatPrice(0);
-    this.paidInputEl.value = "0";
+    this.paidInputEl.value = '0';
   }
 };
 
 const generateItem = c => {
   const line = template.cloneNode(true);
-  line.style.display = 'flex';
+  line.style.display = '';
   line.querySelector('label').textContent = c.name;
   line.removeAttribute('id');
   line.querySelector('span').textContent = formatPrice(c.price);
@@ -161,7 +159,6 @@ const generateItem = c => {
     }
   });
   input.addEventListener('input', (e) => {
-    console.log('Calculating based on an oninput event');
     const newQty = Number(e.currentTarget.value);
     if (!isNaN(newQty)) {
       c.qty = newQty;
